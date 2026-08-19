@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Courier New", monospace;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font-mono);
+  background: #ffffff;
+  color: #000000;
+}
+
+::selection {
+  background: #000000;
+  color: #ffffff;
+}

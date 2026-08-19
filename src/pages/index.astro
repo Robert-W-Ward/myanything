@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    title: 'IDA* Search Analysis',
+    description: 'Compares Manhattan Distance vs. Manhattan Distance + Linear Conflict heuristics on the 15-puzzle using Iterative Deepening A*. Benchmarked across 500 puzzles, rewrote from Python to C++ for sub-second solves.',
+    link: 'https://github.com/Robert-W-Ward/IDAStarAnalysis',
+  },
+  {
+    title: 'SOUP',
+    description: 'An Elixir/Phoenix and SQLite app that automates ingestion, validation, tracking, and management of scientific sample data for NOAA ocean exploration expeditions.',
+    link: '/projects/soup',
+  },
+
+];
+---
+
+<BaseLayout title="Robert Ward II">
+  <div class="min-h-screen flex flex-col justify-between p-8 md:p-16 max-w-6xl mx-auto">
+
+    <!-- Header Section -->
+    <header class="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
+
+      <!-- Profile Photo -->
+      <div class="border-2 border-black w-32 h-32 md:w-40 md:h-40 flex-shrink-0 overflow-hidden">
+        <img
+          src="/Headshot.jpeg"
+          alt="Robert Ward II"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Name and Links -->
+      <div class="flex flex-col gap-4">
+        <h1 class="text-3xl md:text-4xl font-bold uppercase tracking-widest">
+          Robert Ward II
+        </h1>
+
+        <nav class="flex flex-wrap gap-4 text-sm">
+          <a
+            href="https://github.com/Robert-W-Ward"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border-2 border-black px-4 py-2 uppercase tracking-wider no-underline text-black hover:bg-black hover:text-white transition-colors duration-150"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/robert-ward-ii/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border-2 border-black px-4 py-2 uppercase tracking-wider no-underline text-black hover:bg-black hover:text-white transition-colors duration-150"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://docs.google.com/document/d/e/2PACX-1vQi0uaGJfxh5bF7P363GAMGqUHwmt9tyiCKJ34uin4t_eatesHgh7HFurCwJ-r1TWTXWVBVcspSfzAH/pub"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border-2 border-black px-4 py-2 uppercase tracking-wider no-underline text-black hover:bg-black hover:text-white transition-colors duration-150"
+          >
+            Resume
+          </a>
+        </nav>
+      </div>
+
+    </header>
+
+    <!-- About -->
+    <section class="text-sm leading-relaxed text-center">
+      <p>Passionate software engineer with a Bachelor's and Master's in Computer Science from Mississippi State University. Experience with React, Elixir, C/C++, Rust, Python, Linux and Docker.</p>
+    </section>
+
+    <!-- Divider -->
+    <div class="border-t-2 border-black my-12 md:my-16"></div>
+
+    <!-- Projects Section -->
+    <section>
+      <h2 class="text-xl font-bold uppercase tracking-widest mb-8">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {projects.map((project) => (
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            link={project.link}
+          />
+        ))}
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>

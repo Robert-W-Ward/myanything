@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="SOUP — Robert Ward II">
+  <div class="min-h-screen p-8 md:p-16 max-w-4xl mx-auto">
+
+    <!-- Back Link -->
+    <a
+      href="/"
+      class="inline-block border-2 border-black px-4 py-2 text-sm uppercase tracking-wider no-underline text-black hover:bg-black hover:text-white transition-colors duration-150 mb-12"
+    >
+      ← Back
+    </a>
+
+    <!-- Title -->
+    <h1 class="text-3xl md:text-4xl font-bold uppercase tracking-widest mb-4">
+      SOUP
+    </h1>
+    <p class="text-sm uppercase tracking-wider mb-8">Sampling Operations User Portal</p>
+
+    <!-- Description -->
+    <section class="mb-12">
+      <p class="text-sm leading-relaxed max-w-2xl">
+        An Elixir/Phoenix and SQLite application that automates ingestion, validation,
+        tracking, and management of scientific sample data collected during NOAA ocean
+        exploration expeditions.
+      </p>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="mb-12">
+      <h2 class="text-lg font-bold uppercase tracking-widest mb-4">Tech Stack</h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="border-2 border-black px-3 py-1 text-xs uppercase tracking-wider">Elixir</span>
+        <span class="border-2 border-black px-3 py-1 text-xs uppercase tracking-wider">Phoenix</span>
+        <span class="border-2 border-black px-3 py-1 text-xs uppercase tracking-wider">SQLite</span>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="border-t-2 border-black mb-12"></div>
+
+    <!-- Screenshots -->
+    <section>
+      <h2 class="text-lg font-bold uppercase tracking-widest mb-8">Screenshots</h2>
+      <div class="flex flex-col gap-8">
+        <div class="border-2 border-black overflow-hidden">
+          <img src="/soup_dashboard.png" alt="SOUP Dashboard" class="w-full" />
+        </div>
+        <div class="border-2 border-black overflow-hidden">
+          <img src="/soup_detail_page.png" alt="SOUP Detail Page" class="w-full" />
+        </div>
+        <div class="border-2 border-black overflow-hidden">
+          <img src="/soup_sample_edit_modal.png" alt="SOUP Sample Edit Modal" class="w-full" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Divider -->
+    <div class="border-t-2 border-black mt-12 mb-8"></div>
+
+    <!-- Footer -->
+    <footer class="text-xs uppercase tracking-wider">
+      Built for NOAA Ocean Exploration
+    </footer>
+
+  </div>
+</BaseLayout>
